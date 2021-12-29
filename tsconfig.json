@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "./dist",
+    "module": "esnext",
+    "target": "esnext",
+    "lib": [
+      "esnext",
+    ],
+    "alwaysStrict": true,
+    "strict": true,
+    "preserveConstEnums": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "types": [
+      "node",
+      "jest"
+    ]
+  },
+  "include": [
+    "./index.ts",
+    "./jest.config.ts",
+    "./src/**/*",
+    "test/**/*",
+  ],
+  "exclude": [
+    "node_modules/",
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "esnext"
+    }
+  }
+}
