@@ -7,7 +7,7 @@ if ($LASTEXITCODE) {
 	throw 'Lint failed'
 }
 
-& "$PSScriptRoot\package-build.ps1"
+& "$PSScriptRoot\build.ps1"
 
 if ($LASTEXITCODE) {
 	throw 'Build failed'
