@@ -1,10 +1,13 @@
 {
   "name": "fluen-ts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Fluent Validation for TypeScript",
   "main": "index.ts",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf dist && tsc && copyfiles package.json README.md CHANGELOG.md dist",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
     "test": "jest",
@@ -24,6 +27,7 @@
     "@types/jest": "^27.0.3",
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.5.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-import-resolver-typescript": "^2.5.0",

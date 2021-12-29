@@ -7,10 +7,4 @@ if ($LASTEXITCODE) {
 	throw 'Lint failed'
 }
 
-& "$PSScriptRoot\build.ps1"
-
-if ($LASTEXITCODE) {
-	throw 'Build failed'
-}
-
 npm publish
